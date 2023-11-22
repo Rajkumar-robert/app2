@@ -1,0 +1,25 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Item</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <h1>Simple MongoDB Web App</h1>
+  <ul>
+    <% items.forEach(item => { %>
+      <li>
+        <%= item.username %> - <%= item.email %>
+        <form action="/userData/<%= item._id %>?_method=DELETE" method="POST" style="display:inline;">
+          <button type="submit">Remove</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/userData/new">Add New Item</a>
+</body>
+</html>

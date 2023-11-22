@@ -1,0 +1,28 @@
+<!-- views/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Item</title>
+  <link rel="stylesheet" href="/styles/style2.css">
+</head>
+<body>
+  <h2>Add New Item</h2>
+  <form action="/userData" method="POST"> <!-- Update the action attribute -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <button type="submit">Add Item</button>
+  </form>
+  
+  <a href="/">Back to userData</a>
+</body>
+</html>
